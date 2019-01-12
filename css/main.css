@@ -1,0 +1,89 @@
+/* base styles and resets */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+main {
+  font-family: 'Lato', sans-serif;
+}
+
+/* social media nav */
+.social-media-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.social-media-nav__list {
+  list-style: none;
+  text-decoration: none;
+}
+
+.social-media-nav__item {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+.social-media-nav__item > * {
+  vertical-align: middle;
+}
+
+.social-media-nav a,
+.social-media-nav a:visited,
+.social-media-nav a:active {
+  color: #333;
+  text-decoration: none;
+  outline: none;
+  margin-left: 1rem;
+  display: inline-block;
+  line-height: 2;
+  position: relative;
+}
+
+/* make the underline thingy */
+.social-media-nav__link::after {
+  border-bottom: 2px solid #333;
+  content: '';
+  position: absolute;
+  top: 90%;
+  left: 0;
+  transition: 0.2s;
+  width: 0%;
+}
+
+.social-media-nav__link:active {
+  transform: translateY(-1px);
+}
+
+.social-media-nav__link:hover::after {
+  width: 100%;
+}
+
+/* svg icons */
+.visually-hidden {
+  display: none;
+}
+
+.icon {
+  /* same the font-size */
+  width: 3rem;
+  height: 3rem;
+
+  /* make it match the text color of the list items */
+  fill: currentColor;
+}
